@@ -7,7 +7,7 @@ DATA_URL = ('https://raw.githubusercontent.com/CruzDataConsulting/appweb1/master
 st.cache_data
 def load_data_byrange(starid, endid):
     data=pd.read_csv(DATA_URL)
-    datos_filtrados_rango=data[(data['index']>=starid) & (data['index']>=endid)]
+    datos_filtrados_rango=data[(data['index']>=starid) & (data['index']<=endid)]
     return datos_filtrados_rango
 
 starid=st.text_input("Star index: ")
