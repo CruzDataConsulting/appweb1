@@ -16,7 +16,7 @@ btnRange=st.button("Busca rango")
 
 if (btnRange):
     filtro_por_rango=load_data_byrange(int(starid), int(endid))
-    cuenta_filas=filter_by_range.shape[0]
+    cuenta_filas=filtro_por_rango.shape[0]
     st.write(f"Total itemos(jeje) {cuenta_filas}")
 
     st.dataframe(filtro_por_rango)
