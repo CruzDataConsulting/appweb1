@@ -11,10 +11,9 @@ def load_data_sex(sex):
     return datos_filtrados_sexo
 
 mydata=data=pd.read_csv(DATA_URL)
-st.dataframe(mydata)
+#st.dataframe(mydata)
 sexo_elegido = st.selectbox("Elige Sexo", mydata['sex'].unique())
-st.write(f"Selected Option: {sexo_elegido!r}")
-
+st.write(f"Opción elegida: {sexo_elegido!r}")
 filtro_por_sexo = mydata['sex'] == sexo_elegido
 
 cuenta_filas=filtro_por_sexo.shape[0]
