@@ -5,7 +5,7 @@ st.title("Streamlit - Busca rangos")
 
 DATA_URL = ('https://raw.githubusercontent.com/CruzDataConsulting/appweb1/master/dataset.csv')
 st.cache_data
-def load_data_sex(sex):
+def load_data_sex(sexo):
     data=pd.read_csv(DATA_URL)
     datos_filtrados_sexo=data[data['sex']]
     return datos_filtrados_sexo
