@@ -10,6 +10,13 @@ def load_data_sex(sex):
     datos_filtrados_sexo=data[data['sex']]
     return datos_filtrados_sexo
 
-sexo_elegido = st.selectbox("Select Sexo",load_data_sex['sex'].unique())
+sexo_elegido = st.selectbox("Elige Sexo",load_data_sex['sex'].unique())
 st.write(f"Selected Option: {sexo_elegido!r}")
-filtered_data_sex = load_data_sex[load_data_sex['sex'] == sexo_elegido]
+if (sexo_elegido):
+     filtrosexo=load_data_sex(sexo_elegido)
+     cuenta_filas=filtrosexo.shape[0] #numero de filas
+     st.write(f"Coincidencias encontradas: {cuenta_filas}")
+
+#st.dataframe(filtronombre)
+#st.dataframe(filtro_por_rango)
+st.dataframe(filtrosexo)
