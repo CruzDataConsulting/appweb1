@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd 
 
-st.title("Streamlit - Busca rangos")
+st.title("Streamlit - Filtra sexo")
 
 DATA_URL = ('https://raw.githubusercontent.com/CruzDataConsulting/appweb1/master/dataset.csv')
 st.cache_data
