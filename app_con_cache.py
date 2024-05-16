@@ -1,7 +1,7 @@
 import pandas as pd 
 import streamlit as st
 
-DATA_URL = ('C:/Users/hdcb1/appweb1/dataset.csv')
+DATA_URL = ('https://raw.githubusercontent.com/CruzDataConsulting/appweb1/master/dataset.csv')
 st.cache_data
 def load_data(nrows):
     data=pd.read_csv(DATA_URL, nrows=nrows)

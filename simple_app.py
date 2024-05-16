@@ -1,7 +1,7 @@
 import pandas as pd 
 import streamlit as st
 
-names_link = '/dataset.csv'
+names_link = 'https://raw.githubusercontent.com/CruzDataConsulting/appweb1/master/dataset.csv'
 names_data = pd.read_csv(names_link)
 
 # Create the title for the web app 
