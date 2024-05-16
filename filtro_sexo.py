@@ -10,10 +10,12 @@ def load_data_sex(sex):
     datos_filtrados_sexo=data[data['sex']]
     return datos_filtrados_sexo
 
-sexo_elegido = st.selectbox("Elige Sexo", load_data_sex['sex'].unique())
+mydata=data=pd.read_csv(DATA_URL)
+st.dataframe(mydata)
+sexo_elegido = st.selectbox("Elige Sexo", mydata['sex'].unique())
 st.write(f"Selected Option: {sexo_elegido!r}")
 
-filtro_por_sexo = load_data_sex['sexo'] == sexo_elegido
+filtro_por_sexo = mydata['sex'] == sexo_elegido
 
 cuenta_filas=filtro_por_sexo.shape[0]
 st.write(f"Total coincidencias {cuenta_filas}")
