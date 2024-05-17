@@ -20,7 +20,7 @@ DATE_COLUMN='date/time'
 DATA_URL=('https://raw.githubusercontent.com/CruzDataConsulting/appweb1/master/uber_dataset.csv')
 
 
-@st.cache_data
+@st.cache
 def load_data(nrows):
     data=pd.read_csv(DATA_URL,nrows=nrows)
     lowercase=lambda x: str(x).lower()
