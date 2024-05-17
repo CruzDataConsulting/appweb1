@@ -17,7 +17,8 @@ st.markdown("____________")
 st.title("Viajes uber")
 
 DATE_COLUMN='date/time'
-DATA_URL=('c:\Users\hdcb1\OneDrive\Documentos\SeniorDataSciense\uber_dataset.csv')
+DATA_URL=('https://raw.githubusercontent.com/CruzDataConsulting/appweb1/master/uber_dataset.csv')
+
 
 @st.cache
 def load_data(nrows):
