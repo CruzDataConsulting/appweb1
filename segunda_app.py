@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 
-titanic_link=('https://raw.githubusercontent.com/CruzDataConsulting/appweb1/master/titanic.csv')
+titanic_link=('https://raw.githubusercontent.com/CruzDataConsulting/appweb1/master/titanic_data.csv')
 titanic_data=pd.read_csv(titanic_link)
 
 #titulo de appweb
