@@ -34,7 +34,7 @@ fare_select=st.slider("Elige fare",
                              min_value=float(titanic_data['fare'].min()),
                              max_value=float(titanic_data['fare'].max())
                              )
-subset_fare=titanic_data[(titanic_data['fare']>=fare_select)]
+subset_fare=titanic_data[(titanic_data['fare']<=fare_select)]
 st.write(f"Numero de registros con este fare {fare_select}: {subset_fare.shape[0]}")
 st.markdown("____________")
 st.dataframe(subset_fare)
