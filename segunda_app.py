@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import datetime
+import matplotlib.pyplot as ptl
 
 titanic_link=('https://raw.githubusercontent.com/CruzDataConsulting/appweb1/master/titanic_data.csv')
 titanic_data=pd.read_csv(titanic_link)
@@ -38,3 +39,26 @@ subset_fare=titanic_data[(titanic_data['fare']<=fare_select)]
 st.write(f"Numero de registros con este fare {fare_select}: {subset_fare.shape[0]}")
 st.markdown("____________")
 st.dataframe(subset_fare)
+
+st.markdown("____________")
+fig, ax = plt.subplots() 
+ax.hist(titanic_data.fare) 
+st.header("Histograma del Titanic") 
+st.pyplot(fig)
+st.markdown("____________")
+fig2, ax2 = plt.subplots()
+y_pos = titanic_data['class'] 
+x_pos = titanic_data['fare']
+ax2.barh(y_pos, x_pos) 
+ax2.set_ylabel("Class") 
+ax2.set_xlabel("Fare") 
+ax2.set_title('¿Cuánto pagaron las clases del Titanic')
+st.header("Grafica de Barras del Titanic") 
+st.pyplot(fig2)
+st.markdown("____________")
+fig3, ax3 = plt.subplots()
+ax3.scatter(titanic_data.age, titanic_data.fare) 
+ax3.set_xlabel("Edad") 
+ax3.set_ylabel("Tarifa")
+st.header("Grafica de Dispersión del Titanic")
+st.pyplot(fig3)
