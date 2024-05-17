@@ -29,8 +29,8 @@ elige_clase=st.radio("Elige la clase", titanic_data['class'].unique())
 st.write("Usted eligió: ",elige_clase)
 st.markdown("______")
 
-opciones=st.expander("Configuración opcional",True)
-fare_select=st.slider("Elige fare",
+optionals=st.expander("Configuración opcional",True)
+fare_select=optionals.slider("Elige fare",
                              min_value=float(titanic_data['fare'].min()),
                              max_value=float(titanic_data['fare'].max())
                              )
