@@ -15,7 +15,7 @@ sidebar.write("Sea agregan controles en sidebar")
 #usuario pide hora actual
 today=datetime.date.today()
 today_date=st.date_input("Fecha de hoy: ",today)
-st.success("Fecha corriente:" % (today_date))
+st.success("Fecha corriente: '%s'"%(today_date))
 
 #Muestra contenido del dataset si selecciona check box
 st.header("Dataset Titanic")
