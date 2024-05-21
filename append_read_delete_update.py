@@ -66,6 +66,7 @@ if btnEliminar:
         dbNames.document(deletename.id).delete()
         st.sidebar.write(f"{nameSearch} Eliminado")
 
+#seccion actualizar
 st.sidebar.markdown("----")
 newname=st.sidebar.text_input("Actualizar nombre")
 btnActualizar=st.sidebar.button("Actualizar")
@@ -78,6 +79,6 @@ if btnActualizar:
         myupdate=dbNames.document(updatename.id)
         myupdate.update(
             {
-                "name: ":newname
+                "name":newname
                 }
                 )
