@@ -50,7 +50,8 @@ btnFiltrar=st.sidebar.button("Buscar")
 
 if btnFiltrar:
     doc=loadByName(nameSearch)
-    if doc in None:
+    if doc is None:
         st.sidebar("Nombre no existe")
     else:
         st.sidebar.write(doc.to_dict())
+
