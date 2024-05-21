@@ -51,7 +51,7 @@ btnFiltrar=st.sidebar.button("Buscar")
 if btnFiltrar:
     doc=loadByName(nameSearch)
     if doc is None:
-        st.sidebar("Nombre no existe")
+        st.sidebar.write(f"{nameSearch} Nombre no existe")
     else:
         st.sidebar.write(doc.to_dict())
 #boton eliminar
@@ -61,8 +61,7 @@ btnEliminar=st.sidebar.button("Eliminar")
 if btnEliminar:
     deletename=loadByName(nameSearch)
     if deletename is None:
-        st.sidebar.write(f"{nameSearch}Nombre no existe")
+        st.sidebar.write(f"{nameSearch} Nombre no existe")
     else:
         dbNames.document(deletename.id).delete()
-        st.sidebar.write(f"{nameSearch}Eliminado")
-        
+        st.sidebar.write(f"{nameSearch} Eliminado")
