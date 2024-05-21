@@ -12,6 +12,6 @@ firebase_admin.initialize_app(cred)
 db=firestore.client()
 doc_ref=db.collection(u"names") #names es nombre de la coleccion en firebase
 #importa csv
-df=pd.read_csv(path+"dataset.csv")
+df=pd.read_csv(path+"demo_names_dataset.csv")
 tmp=df.to_dict(orient="records")
 list(map(lambda x: doc_ref.add(x), tmp))
