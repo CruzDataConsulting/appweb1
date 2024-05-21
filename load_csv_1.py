@@ -13,5 +13,5 @@ db=firestore.client()
 doc_ref=db.collection(u"names") #names es nombre de la coleccion en firebase
 #importa csv
 df=pd.read_csv(path+"dataset.csv")
-tmp=df.to_dict(orient="recors")
+tmp=df.to_dict(orient="records")
 list(map(lambda x: doc_ref.add(x), tmp))
